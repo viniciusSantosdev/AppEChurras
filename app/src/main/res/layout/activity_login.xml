@@ -4,39 +4,43 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@mipmap/PlanodeFundo"
+    android:background="@mipmap/planodefundo"
     tools:context=".LoginActivity">
 
-    <ImageView
-        android:id="@+id/salsicha"
-        android:layout_width="162dp"
-        android:layout_height="121dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="100dp"
-        android:layout_marginEnd="16dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@mipmap/sausage" />
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
-    <ImageView
-        android:id="@+id/iconeLogin"
-        android:layout_width="70dp"
-        android:layout_height="64dp"
-        android:layout_marginStart="45dp"
-        android:layout_marginTop="252dp"
-        android:layout_marginEnd="296dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@mipmap/login" />
+        <ImageView
+            android:id="@+id/salsicha"
+            android:layout_width="162dp"
+            android:layout_height="121dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="50dp"
+            android:layout_marginEnd="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@mipmap/sausage" />
 
-    <ImageView
+        <ImageView
+            android:id="@+id/iconeLogin"
+            android:layout_width="70dp"
+            android:layout_height="64dp"
+            android:layout_marginStart="45dp"
+            android:layout_marginTop="202dp"
+            android:layout_marginEnd="296dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@mipmap/login" />
+
+        <ImageView
             android:id="@+id/iconePassword"
             android:layout_width="70dp"
             android:layout_height="64dp"
-            android:layout_marginStart="40dp"
+            android:layout_marginStart="45dp"
             android:layout_marginTop="53dp"
             android:layout_marginEnd="296dp"
             app:layout_constraintEnd_toEndOf="parent"
@@ -44,40 +48,29 @@
             app:layout_constraintTop_toBottomOf="@+id/iconeLogin"
             app:srcCompat="@mipmap/password" />
 
-    <Button
-        android:id="@+id/btn_sign"
-        android:layout_width="100dp"
-        android:layout_height="50dp"
-        android:layout_marginStart="82dp"
-        android:layout_marginTop="88dp"
-        android:background="@drawable/button_bg"
-        android:text="@string/btn_login"
-        android:textColor="#000"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/iconePassword" />
+        <Button
+            android:id="@+id/btn_sign"
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="82dp"
+            android:layout_marginTop="88dp"
+            android:background="@drawable/button_bg"
+            android:text="@string/btn_login"
+            android:textColor="#000"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/iconePassword" />
 
-    <Button
-        android:id="@+id/btn_cadastrar-se"
-        android:layout_width="100dp"
-        android:layout_height="50dp"
-        android:layout_marginStart="232dp"
-        android:layout_marginTop="88dp"
-        android:background="@drawable/button_bg"
-        android:text="@string/btn_cadastro"
-        android:textColor="#000"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/iconePassword" />
-
-    <ImageView
-        android:id="@+id/nomeApp"
-        android:layout_width="610dp"
-        android:layout_height="560dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginEnd="16dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.44"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/iconePassword"
-        app:srcCompat="@mipmap/NomeApp" />
+        <Button
+            android:id="@+id/btn_cadastrar-se"
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="232dp"
+            android:layout_marginTop="88dp"
+            android:background="@drawable/button_bg"
+            android:text="@string/btn_cadastro"
+            android:textColor="#000"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/iconePassword" />
+    </ScrollView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
