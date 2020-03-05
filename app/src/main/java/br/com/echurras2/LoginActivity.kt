@@ -1,6 +1,7 @@
 package br.com.echurras2
 
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Build
@@ -26,5 +27,9 @@ class LoginActivity : AppCompatActivity() {
         this.clearFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS)
         this.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS)
         this.statusBarColor= ContextCompat.getColor(baseContext, color)
+    }
+
+    fun Cerate(){
+        val intent = Intent(this, CreateActivity::class.java) //troca de tela
     }
 }

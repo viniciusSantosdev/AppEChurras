@@ -2,7 +2,7 @@
     <string name="app_name">EChurras2</string>
     <string name="login_account">Login</string>
     <string name="password_account">Senha</string>
-    <string name="forgot_password">Esqueci Minha Senha</string>
+    <string name="forgot_password">Esqueci Minha Senha :(</string>
     <string name="btn_login">Login</string>
     <string name="btn_cadastro">Cadastrar</string>
 </resources>
