@@ -6,9 +6,24 @@
     android:layout_height="match_parent"
     tools:context=".CreateActivity">
 
-    <LinearLayout
+    <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@mipmap/planodefundo"></LinearLayout>
+        android:background="@mipmap/planodefundo"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="-206dp">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@mipmap/planodefundo"
+                tools:context="br.com.echurras2.LoginActivity"
+                android:orientation="vertical">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Nome"></TextView>
+
+            </LinearLayout>
+    </ScrollView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

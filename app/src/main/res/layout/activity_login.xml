@@ -17,16 +17,25 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:context="br.com.echurras2.LoginActivity"
+            tools:context="br.com.echurras2.LoginActivity"
             android:orientation="vertical">
-
                 <ImageView
                     android:layout_width="150dp"
                     android:layout_height="150dp"
                     android:layout_gravity="center"
-                    android:layout_marginTop="100dp"
-                    android:src="@mipmap/sausage"
-                    />
+                    android:layout_marginTop="70dp"
+                    android:src="@mipmap/sausage" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="50dp"
+                    android:layout_marginBottom="-40dp"
+                    android:fontFamily="sans-serif-black"
+                    android:text="Login"
+                    android:textColor="#000"
+                    android:textSize="18sp" />
 
                 <ImageView
                     android:layout_width="100dp"
@@ -44,17 +53,29 @@
                     android:layout_marginRight="60dp"
                     android:background="@drawable/button_bg"
                     android:fontFamily="sans-serif-black"
-                    android:text="@string/login_account"
                     android:textAlignment="center"
                     android:textColor="#000"
-                    android:textStyle="italic" />
+                    android:textStyle="italic"
+                    />
 
-                <ImageView
-                    android:layout_width="100dp"
-                    android:layout_height="50dp"
-                    android:src="@mipmap/password"
-                    android:layout_marginLeft="-15dp"
-                    android:layout_marginTop="50dp"/>
+            <ImageView
+                android:layout_width="100dp"
+                android:layout_height="50dp"
+                android:layout_marginLeft="-15dp"
+                android:layout_marginTop="50dp"
+                android:layout_marginBottom="-20dp"
+                android:src="@mipmap/password" />
+
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:text="Senha"
+                    android:layout_marginBottom="50dp"
+                    android:layout_marginTop="-50dp"
+                    android:textColor="#000"
+                    android:textSize="18sp"
+                    android:fontFamily="sans-serif-black"/>
 
                 <EditText
                     android:id="@+id/senha_campo"
@@ -65,41 +86,41 @@
                     android:layout_marginRight="60dp"
                     android:background="@drawable/button_bg"
                     android:fontFamily="sans-serif-black"
-                    android:text="@string/password_account"
                     android:textAlignment="center"
                     android:textColor="#000"
                     android:textStyle="italic" />
 
-                <Button
-                    android:id="@+id/btn_login"
-                    android:layout_width="110dp"
-                    android:layout_height="40dp"
-                    android:layout_marginLeft="80dp"
-                    android:layout_marginTop="60dp"
-                    android:layout_marginRight="70dp"
-                    android:background="@drawable/login_button_bg"
-                    android:fontFamily="sans-serif-black"
-                    android:text="@string/btn_login"
-                    android:textAlignment="center"
-                    android:textColor="#000"
-                    android:textSize="18sp"
-                    android:textStyle="italic" />
+            <Button
+                android:id="@+id/btn_login"
+                android:layout_width="110dp"
+                android:layout_height="40dp"
+                android:layout_marginLeft="80dp"
+                android:layout_marginTop="60dp"
+                android:layout_marginRight="70dp"
+                android:background="@drawable/login_button_bg"
+                android:fontFamily="sans-serif-black"
+                android:onClick="Login"
+                android:text="@string/btn_login"
+                android:textAlignment="center"
+                android:textColor="#000"
+                android:textSize="18sp"
+                android:textStyle="italic" />
 
-                <Button
-                    android:id="@+id/btn_cadastro"
-                    android:layout_width="110dp"
-                    android:layout_height="40dp"
-                    android:layout_marginLeft="210dp"
-                    android:layout_marginTop="-39dp"
-                    android:layout_marginRight="70dp"
-                    android:background="@drawable/login_button_bg"
-                    android:fontFamily="sans-serif-black"
-                    android:text="@string/btn_cadastro"
-                    android:textAlignment="center"
-                    android:textColor="#000"
-                    android:textSize="18sp"
-                    android:textStyle="italic"
-                    />
+            <Button
+                android:id="@+id/btn_cadastro"
+                android:layout_width="110dp"
+                android:layout_height="40dp"
+                android:layout_marginLeft="210dp"
+                android:layout_marginTop="-39dp"
+                android:layout_marginRight="70dp"
+                android:background="@drawable/login_button_bg"
+                android:fontFamily="sans-serif-black"
+                android:onClick="Create"
+                android:text="@string/btn_cadastro"
+                android:textAlignment="center"
+                android:textColor="#000"
+                android:textSize="18sp"
+                android:textStyle="italic" />
 
                 <TextView
                     android:layout_width="100dp"
@@ -110,14 +131,17 @@
                     android:text="@string/forgot_password"
                     android:textAlignment="center"
                     android:textSize="18sp"
-                    android:textStyle="italic" />
+                    android:textStyle="italic"
+                    android:onClick="EsqueciSenha"/>
 
-                <EditText
+                <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="125dp"
                     android:layout_marginTop="80dp"
                     android:text="EChurras copyright"/>
+
+
 
         </LinearLayout>
     </ScrollView>
