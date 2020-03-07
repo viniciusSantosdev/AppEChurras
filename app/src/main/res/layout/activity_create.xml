@@ -18,10 +18,107 @@
                 android:background="@mipmap/planodefundo"
                 tools:context="br.com.echurras2.LoginActivity"
                 android:orientation="vertical">
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Nome"></TextView>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="40dp"
+                    android:layout_marginRight="130dp"
+                    android:fontFamily="sans-serif-black"
+                    android:text="Nome"
+                    android:textColor="#000"
+                    android:textSize="18sp"
+                    android:textStyle="italic"/>
+
+                <EditText
+                    android:id="@+id/nome_campo"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="50dp"
+                    android:layout_marginRight="50dp"
+                    android:background="@drawable/button_bg"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="40dp"
+                    android:layout_marginRight="130dp"
+                    android:layout_marginLeft="20dp"
+                    android:fontFamily="sans-serif-black"
+                    android:text="Sobrenome"
+                    android:textColor="#000"
+                    android:textSize="18sp"
+                    android:textStyle="italic"/>
+
+                <EditText
+                    android:id="@+id/sobrenome_campo"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="50dp"
+                    android:layout_marginRight="50dp"
+                    android:background="@drawable/button_bg"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="40dp"
+                    android:layout_marginRight="115dp"
+                    android:fontFamily="sans-serif-black"
+                    android:text="Username"
+                    android:textColor="#000"
+                    android:textSize="18sp"
+                    android:textStyle="italic"/>
+
+                <EditText
+                    android:id="@+id/username_campo"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="50dp"
+                    android:layout_marginRight="50dp"
+                    android:background="@drawable/button_bg"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="40dp"
+                    android:layout_marginRight="130dp"
+                    android:fontFamily="sans-serif-black"
+                    android:text="Login"
+                    android:textColor="#000"
+                    android:textSize="18sp"
+                    android:textStyle="italic"/>
+
+                <EditText
+                    android:id="@+id/login_campo_cadastro"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="50dp"
+                    android:layout_marginRight="50dp"
+                    android:background="@drawable/button_bg"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="40dp"
+                    android:layout_marginRight="130dp"
+                    android:fontFamily="sans-serif-black"
+                    android:text="Senha"
+                    android:textColor="#000"
+                    android:textSize="18sp"
+                    android:textStyle="italic"/>
+
+                <EditText
+                    android:id="@+id/senha_campo_cadastro"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="50dp"
+                    android:layout_marginRight="50dp"
+                    android:background="@drawable/button_bg"/>
 
             </LinearLayout>
     </ScrollView>
