@@ -6,4 +6,30 @@
     android:layout_height="match_parent"
     tools:context=".MainAppActivity">
 
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@mipmap/planodefundo"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            tools:context="br.com.echurras2.LoginActivity">
+
+           <ImageButton
+               android:layout_width="65dp"
+               android:layout_height="65dp"
+               android:background="@drawable/buttonevent"
+               android:layout_marginLeft="300dp"
+               android:layout_marginRight="100dp"
+               android:layout_marginTop="630dp"
+               android:src="@mipmap/chicken"
+               android:scaleType="fitCenter"></ImageButton>
+
+        </LinearLayout>
+    </ScrollView>
+
 </androidx.constraintlayout.widget.ConstraintLayout>
