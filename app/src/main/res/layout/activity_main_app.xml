@@ -4,12 +4,12 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainAppActivity">
+    tools:context=".MainAppActivity"
+    android:background="@mipmap/planodefundo">
 
     <ScrollView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:background="@mipmap/planodefundo"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
@@ -23,19 +23,29 @@
                android:layout_width="65dp"
                android:layout_height="65dp"
                android:background="@drawable/buttonevent"
-               android:layout_marginLeft="300dp"
+               android:layout_marginLeft="100dp"
                android:layout_marginRight="100dp"
                android:layout_marginTop="630dp"
-               android:src="@mipmap/sinalmais"
+               android:src="@mipmap/more"
+               android:layout_gravity="center"
                android:scaleType="fitCenter"
                android:onClick="listarItens"/>
 
             <ImageView
-                android:id="@+id/imageView"
+                android:id="@+id/menu"
                 android:layout_width="70dp"
                 android:layout_height="50dp"
+                android:layout_marginLeft="340dp"
                 android:layout_marginTop="-680dp"
-                app:srcCompat="@mipmap/menu" />
+                app:srcCompat="@mipmap/openmenu"/>
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                app:srcCompat="@mipmap/users"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="-50dp"/>
 
         </LinearLayout>
     </ScrollView>
