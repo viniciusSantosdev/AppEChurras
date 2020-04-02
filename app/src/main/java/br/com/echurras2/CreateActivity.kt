@@ -13,7 +13,8 @@ class CreateActivity : AppCompatActivity() {
     }
 
     fun CriarCadastro(v: View){
-        var intent = Intent(this, MainAppActivity::class.java )
+        var intent = Intent(this, LoginActivity::class.java )
         startActivity(intent)
+        finish()
     }
 }

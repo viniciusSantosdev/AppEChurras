@@ -4,7 +4,19 @@
     <string name="password_account">Senha</string>
     <string name="forgot_password">Esqueci Minha Senha</string>
     <string name="btn_login">Login</string>
-    <string name="btn_cadastro">Cadastrar</string>
+    <string name="username">Username</string>
+    <string name="username_hint">Entre com seu Username</string>
+    <string name="email">E-Mail</string>
+    <string name="email_hint">Entre com seu E-Mail</string>
+    <string name="confirm_btn">Confirmar</string>
+    <string name="add_user">Quem você deseja adicionar?</string>
+    <string name="add_user_hint">Adicione os usuários aqui?</string>
+
+
+    <string name="btn_cadastro">Cadastro</string>
+    <string name="hint_login">Coloque seu login</string>
+    <string name="hint_pass">Coloque sua senha</string>
+
     <string name="title_activity_base">BaseActivity</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>

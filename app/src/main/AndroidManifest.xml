@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".ListaItensActivity"></activity>
+        <activity android:name=".UserList"></activity>
+        <activity android:name=".ListaItensActivity" />
         <activity android:name=".TelaPrincipalActivity" />
         <activity
             android:name=".BaseActivity"

@@ -7,47 +7,38 @@
     tools:context=".MainAppActivity"
     android:background="@mipmap/planodefundo">
 
-    <ScrollView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+    <ImageButton
+        android:layout_width="65dp"
+        android:layout_height="65dp"
+        android:layout_marginStart="159dp"
+        android:layout_marginEnd="159dp"
+        android:layout_marginBottom="40dp"
+        android:background="@drawable/buttonevent"
+        android:onClick="listarItens"
+        android:scaleType="fitCenter"
+        android:src="@mipmap/more"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            tools:context="br.com.echurras2.LoginActivity">
+    <ImageView
+        android:id="@+id/menu"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="330dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toStartOf="@+id/imageView"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@mipmap/openmenu" />
 
-           <ImageButton
-               android:layout_width="65dp"
-               android:layout_height="65dp"
-               android:background="@drawable/buttonevent"
-               android:layout_marginLeft="100dp"
-               android:layout_marginRight="100dp"
-               android:layout_marginTop="630dp"
-               android:src="@mipmap/more"
-               android:layout_gravity="center"
-               android:scaleType="fitCenter"
-               android:onClick="listarItens"/>
-
-            <ImageView
-                android:id="@+id/menu"
-                android:layout_width="70dp"
-                android:layout_height="50dp"
-                android:layout_marginLeft="340dp"
-                android:layout_marginTop="-680dp"
-                app:srcCompat="@mipmap/openmenu"/>
-
-            <ImageView
-                android:id="@+id/imageView"
-                android:layout_width="70dp"
-                android:layout_height="70dp"
-                app:srcCompat="@mipmap/users"
-                android:layout_marginLeft="10dp"
-                android:layout_marginTop="-50dp"/>
-
-        </LinearLayout>
-    </ScrollView>
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="297dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@mipmap/users" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

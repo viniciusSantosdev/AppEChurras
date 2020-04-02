@@ -4,139 +4,166 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ListaItensActivity">
+    tools:context=".ListaItensActivity"
+    android:background="@mipmap/planodefundo">
 
-    <LinearLayout
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="50dp"
+        android:fontFamily="sans-serif-black"
+        android:text="O que você deseja adicionar?"
+        android:textColor="#000"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/addCompra"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="@mipmap/planodefundo"
-        android:orientation="vertical"
-        tools:context="br.com.echurras2.LoginActivity"
-        tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="16dp">
+        android:layout_height="40dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="80dp"
+        android:layout_marginEnd="100dp"
+        android:background="@drawable/button_bg"
+        android:fontFamily="sans-serif-black"
+        android:hint="Adicione itens para sua lista"
+        android:textAlignment="center"
+        android:textColor="#000"
+        android:textStyle="italic"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:layout_marginTop="150dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="20dp"
-            android:layout_marginTop="50dp"
-            android:fontFamily="sans-serif-black"
-            android:text="O que você deseja adicionar?"
-            android:textColor="#000"
-            android:textSize="18sp" />
-
-        <EditText
-            android:id="@+id/addCompra"
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="40dp"
-            android:layout_marginLeft="20dp"
-            android:layout_marginTop="10dp"
-            android:layout_marginRight="90dp"
-            android:background="@drawable/button_bg"
-            android:fontFamily="sans-serif-black"
-            android:hint="Adicione itens para sua lista"
-            android:textAlignment="center"
-            android:textColor="#000"
-            android:textStyle="italic" />
-
-        <ScrollView
-            android:layout_width="match_parent"
-            android:layout_height="350dp">
-        </ScrollView>
-
-        <TextView
-            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:fontFamily="sans-serif-black"
-            android:text="Data"
-            android:textColor="#000"
-            android:textSize="20dp"
-            android:layout_marginLeft="20dp"/>
+            android:orientation="vertical" />
+    </ScrollView>
 
-        <EditText
-            android:id="@+id/addData"
-            android:layout_width="200dp"
-            android:layout_height="40dp"
-            android:layout_marginLeft="20dp"
-            android:layout_marginRight="60dp"
-            android:background="@drawable/button_bg"
-            android:fontFamily="sans-serif-black"
-            android:textAlignment="center"
-            android:textColor="#000"
-            android:textStyle="italic" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginBottom="230dp"
+        android:fontFamily="sans-serif-black"
+        android:text="Data"
+        android:textColor="#000"
+        android:textSize="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:fontFamily="sans-serif-black"
-            android:text="Horário"
-            android:textColor="#000"
-            android:textSize="20dp"
-            android:layout_marginLeft="240dp"
-            android:layout_marginTop="-68dp"/>
+    <EditText
+        android:id="@+id/addData"
+        android:layout_width="200dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginBottom="190dp"
+        android:background="@drawable/button_bg"
+        android:fontFamily="sans-serif-black"
+        android:inputType="date"
+        android:numeric="integer"
+        android:textAlignment="center"
+        android:textColor="#000"
+        android:textStyle="italic"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
-        <EditText
-            android:id="@+id/addHora"
-            android:layout_width="130dp"
-            android:layout_height="40dp"
-            android:layout_marginLeft="240dp"
-            android:layout_marginRight="60dp"
-            android:background="@drawable/button_bg"
-            android:fontFamily="sans-serif-black"
-            android:textAlignment="center"
-            android:textColor="#000"
-            android:textStyle="italic" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="110dp"
+        android:layout_marginBottom="230dp"
+        android:fontFamily="sans-serif-black"
+        android:text="Horário"
+        android:textColor="#000"
+        android:textSize="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="20dp"
-            android:layout_marginTop="30dp"
-            android:fontFamily="sans-serif-black"
-            android:text="Local"
-            android:textColor="#000"
-            android:textSize="20dp" />
+    <EditText
+        android:id="@+id/addHora"
+        android:layout_width="130dp"
+        android:layout_height="40dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginBottom="190dp"
+        android:background="@drawable/button_bg"
+        android:fontFamily="sans-serif-black"
+        android:inputType="time"
+        android:textAlignment="center"
+        android:textColor="#000"
+        android:textStyle="italic"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
 
-        <EditText
-            android:id="@+id/addLocal"
-            android:layout_width="match_parent"
-            android:layout_height="40dp"
-            android:layout_marginLeft="20dp"
-            android:layout_marginTop="10dp"
-            android:layout_marginRight="40dp"
-            android:background="@drawable/button_bg"
-            android:fontFamily="sans-serif-black"
-            android:textAlignment="center"
-            android:textColor="#000"
-            android:textStyle="italic" />
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginBottom="130dp"
+        android:fontFamily="sans-serif-black"
+        android:text="Local"
+        android:textColor="#000"
+        android:textSize="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
-        <Button
-            android:layout_width="150dp"
-            android:layout_height="50dp"
-            android:layout_marginLeft="125dp"
-            android:layout_marginTop="20dp"
-            android:background="@drawable/login_button_bg"
-            android:fontFamily="sans-serif-black"
-            android:onClick="salvarLista"
-            android:text="Salvar"
-            android:textSize="18sp"
-            android:textStyle="italic" />
+    <EditText
+        android:id="@+id/addLocal"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="50dp"
+        android:layout_marginBottom="90dp"
+        android:background="@drawable/button_bg"
+        android:fontFamily="sans-serif-black"
+        android:textAlignment="center"
+        android:textColor="#000"
+        android:textStyle="italic"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
-        <Button
-            android:layout_width="match_parent"
-            android:layout_height="44dp"
-            android:layout_marginLeft="340dp"
-            android:layout_marginRight="15dp"
-            android:layout_marginBottom="560dp"
-            android:layout_marginTop="-639dp"
-            android:background="@drawable/login_button_bg"
-            android:fontFamily="sans-serif-black"
-            android:onClick="salvarLista"
-            android:text="OK"
-            android:textSize="18sp"
-            android:textStyle="italic" />
+    <Button
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="130dp"
+        android:layout_marginEnd="130dp"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/login_button_bg"
+        android:fontFamily="sans-serif-black"
+        android:onClick="salvarLista"
+        android:text="Salvar"
+        android:textSize="18sp"
+        android:textStyle="italic"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
-    </LinearLayout>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:layout_marginStart="330dp"
+        android:layout_marginTop="80dp"
+        android:layout_marginEnd="3dp"
+        android:background="@drawable/login_button_bg"
+        android:fontFamily="sans-serif-black"
+        android:onClick="salvarLista"
+        android:text="OK"
+        android:textSize="18sp"
+        android:textStyle="italic"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

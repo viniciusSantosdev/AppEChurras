@@ -4,18 +4,17 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
-import android.widget.EditText
 
-class ListaItensActivity : AppCompatActivity() {
+class UserList : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_lista_itens)
+        setContentView(R.layout.activity_user_list)
     }
 
-    fun salvarLista(v: View) {
-        var intent = Intent(this, UserList::class.java)
+    fun salvarUser(v: View){
+        var intent = Intent(this, MainAppActivity::class.java)
         startActivity(intent)
+        finish()
     }
-
 }

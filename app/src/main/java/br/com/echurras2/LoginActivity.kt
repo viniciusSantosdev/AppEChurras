@@ -38,6 +38,7 @@ class LoginActivity : AppCompatActivity() {
     fun Login(v: View) {
         val intent = Intent(this, MainAppActivity::class.java) //change the screen for the MainApp
         startActivity(intent)
+        finish()
     }
 
     fun EsqueciSenha(v: View) {

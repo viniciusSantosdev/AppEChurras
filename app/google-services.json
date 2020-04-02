@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "899079137549",
+    "firebase_url": "https://echurras-33e97.firebaseio.com",
+    "project_id": "echurras-33e97",
+    "storage_bucket": "echurras-33e97.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:899079137549:android:733153eb963d05df3d6844",
+        "android_client_info": {
+          "package_name": "br.com.echurras2"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "899079137549-hetjle4o0o9lo5p8mao1lkdihjhbd59h.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyChYNtKadmzFpfwvbkDObFCbbV1eUGxX1Y"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "899079137549-hetjle4o0o9lo5p8mao1lkdihjhbd59h.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -15,5 +15,6 @@ class MainAppActivity : AppCompatActivity() {
     fun listarItens(v: View){
         var intent = Intent(this, ListaItensActivity::class.java)
         startActivity(intent)
+        finish()
     }
 }
