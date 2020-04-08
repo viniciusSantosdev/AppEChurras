@@ -15,6 +15,14 @@
       },
       "oauth_client": [
         {
+          "client_id": "899079137549-a337b3atmfimgfmgb574jducl8gddgdf.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "br.com.echurras2",
+            "certificate_hash": "7e335a94ba5fddd3767a71388fac2e398aed83aa"
+          }
+        },
+        {
           "client_id": "899079137549-hetjle4o0o9lo5p8mao1lkdihjhbd59h.apps.googleusercontent.com",
           "client_type": 3
         }

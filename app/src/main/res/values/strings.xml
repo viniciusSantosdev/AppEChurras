@@ -13,7 +13,7 @@
     <string name="add_user_hint">Adicione os usuários aqui?</string>
 
 
-    <string name="btn_cadastro">Cadastro</string>
+    <string name="btn_register">Cadastro</string>
     <string name="hint_login">Coloque seu login</string>
     <string name="hint_pass">Coloque sua senha</string>
 

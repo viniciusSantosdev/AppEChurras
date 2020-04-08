@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".LoginActivity"
-    android:background="@mipmap/planodefundo">
+    android:background="@mipmap/fundoextendido">
 
 
     <ImageView
@@ -43,12 +43,12 @@
         android:layout_marginStart="3dp"
         android:layout_marginTop="325dp"
         android:src="@mipmap/login"
-        app:layout_constraintEnd_toStartOf="@+id/login_campo"
+        app:layout_constraintEnd_toStartOf="@+id/et_login"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/login_campo"
+        android:id="@+id/et_login"
         android:layout_width="match_parent"
         android:layout_height="40dp"
         android:layout_marginStart="66dp"
@@ -72,7 +72,7 @@
         android:layout_marginTop="400dp"
         android:layout_marginEnd="5dp"
         android:src="@mipmap/password"
-        app:layout_constraintEnd_toStartOf="@+id/senha_campo"
+        app:layout_constraintEnd_toStartOf="@+id/et_pass"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -82,18 +82,20 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
         android:layout_marginStart="436dp"
+        android:layout_marginTop="21dp"
         android:layout_marginEnd="436dp"
-        android:layout_marginBottom="430dp"
+        android:layout_marginBottom="435dp"
         android:fontFamily="sans-serif-black"
         android:text="@string/password_account"
         android:textColor="#000"
         android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/et_login" />
 
     <EditText
-        android:id="@+id/senha_campo"
+        android:id="@+id/et_pass"
         android:layout_width="match_parent"
         android:layout_height="40dp"
         android:layout_marginStart="66dp"
@@ -108,7 +110,7 @@
         android:textStyle="italic"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/login_campo" />
+        app:layout_constraintTop_toBottomOf="@+id/et_login" />
 
     <Button
         android:id="@+id/btn_login"
@@ -118,34 +120,32 @@
         android:layout_marginTop="40dp"
         android:background="@drawable/login_button_bg"
         android:fontFamily="sans-serif-black"
-        android:onClick="Login"
         android:text="@string/btn_login"
         android:textAlignment="center"
         android:textColor="#000"
         android:textSize="15sp"
         android:textStyle="italic"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/senha_campo" />
+        app:layout_constraintTop_toBottomOf="@+id/et_pass" />
 
     <Button
-        android:id="@+id/btn_cadastro"
+        android:id="@+id/btn_register"
         android:layout_width="140dp"
         android:layout_height="40dp"
         android:layout_marginTop="40dp"
-        android:layout_marginEnd="33dp"
+        android:layout_marginEnd="32dp"
         android:background="@drawable/login_button_bg"
         android:fontFamily="sans-serif-black"
-        android:onClick="Create"
-        android:text="@string/btn_cadastro"
+        android:text="@string/btn_register"
         android:textAlignment="center"
         android:textColor="#000"
         android:textSize="15sp"
         android:textStyle="italic"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/senha_campo" />
+        app:layout_constraintTop_toBottomOf="@+id/et_pass" />
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/tv_forgot_pass"
         android:layout_width="170dp"
         android:layout_height="100dp"
         android:layout_gravity="center"
@@ -153,7 +153,6 @@
         android:layout_marginEnd="121dp"
         android:layout_marginBottom="10dp"
         android:fontFamily="sans-serif-black"
-        android:onClick="EsqueciSenha"
         android:text="@string/forgot_password"
         android:textSize="18dp"
         android:textStyle="italic"
