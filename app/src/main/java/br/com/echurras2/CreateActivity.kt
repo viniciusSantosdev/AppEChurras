@@ -16,7 +16,7 @@ import com.google.firebase.database.FirebaseDatabase
 
 class CreateActivity : AppCompatActivity() {
 
-    //Elementos da UI (User Interface - Interface do Usuario)
+    //UI elements
     private var etFirstName: EditText? = null
     private var etLastName: EditText? = null
     private var etUsername: EditText? = null
@@ -26,15 +26,14 @@ class CreateActivity : AppCompatActivity() {
     private var btnCreateAccount: Button? = null
     private var mProgressBar: ProgressDialog? = null
 
-    //Referencias ao Banco de Dados
-
+    //Firebase references
     private var mDatabaseReference: DatabaseReference? = null
     private var mDatabase: FirebaseDatabase? = null
     private var mAuth: FirebaseAuth? = null
 
     private val TAG = "CreateActivity"
 
-    //Variaveis globais
+    //Global varilables
     private var firstName: String? = null
     private var lastName: String? = null
     private var username: String? = null
@@ -60,8 +59,7 @@ class CreateActivity : AppCompatActivity() {
         mProgressBar = ProgressDialog(this)
 
         mDatabase = FirebaseDatabase.getInstance()
-        mDatabaseReference =
-            mDatabase!!.reference!!.child("Users") //When we access, add a new child to firebase
+        mDatabaseReference = mDatabase!!.reference!!.child("Users") //When we access, add a new child to firebase
         mAuth = FirebaseAuth.getInstance()
 
         btnCreateAccount!!.setOnClickListener { createNewAccount() }
@@ -86,7 +84,7 @@ class CreateActivity : AppCompatActivity() {
         ) {
             Toast.makeText(this, "Informações preenchidas corretamente!", Toast.LENGTH_SHORT).show()
         } else {
-            Toast.makeText(this, "Entre com mais detalhes!", Toast.LENGTH_SHORT).show()
+            Toast.makeText(this, "Preencha todos os campos", Toast.LENGTH_SHORT).show()
         }
 
         mProgressBar!!.setMessage("Registrando usuário")

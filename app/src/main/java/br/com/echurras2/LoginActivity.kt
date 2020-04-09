@@ -27,11 +27,11 @@ class LoginActivity : AppCompatActivity() {
 
     private val TAG = "LoginActivity"
 
-    //variaveis globais
+    //Global varilables
     private var login: String? = null
     private var pass: String? = null
 
-    //Elementos da UI
+    //UI elements
     private var tvForgotPassActivity: TextView? = null
     private var etLogin: EditText? = null
     private var etPass: EditText? = null
@@ -39,7 +39,7 @@ class LoginActivity : AppCompatActivity() {
     private var btnCadastrar: Button? = null
     private var mProgressBar: ProgressDialog? = null
 
-    //Referencia ao banco de dados
+    //Firebase reference
     private var mAuth: FirebaseAuth? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -78,12 +78,12 @@ class LoginActivity : AppCompatActivity() {
             )
         } //Change the screen for the ForgotACtivity
 
-        btnCadastrar!!.setOnClickListener { createAccount() }
+        
 
         btnLogin!!.setOnClickListener { loginUser() }
     }
 
-    private fun createAccount(){
+    fun Cadastrar(v:View){
         val intent = Intent(this, CreateActivity::class.java)
         startActivity(intent)
     }
@@ -96,7 +96,7 @@ class LoginActivity : AppCompatActivity() {
             mProgressBar!!.setMessage("Verificando usuário")
             mProgressBar!!.show()
 
-            Log.d(TAG, "Login do usuário")
+            Log.d(TAG, "Usuário logado")
 
             mAuth!!.signInWithEmailAndPassword(login!!, pass!!)
                 .addOnCompleteListener(this) { task ->
@@ -108,16 +108,16 @@ class LoginActivity : AppCompatActivity() {
                         Log.d(TAG, "Logado com sucesso")
                         updateUI()
                     } else {
-                        Log.e(TAG, "Erro ao logar", task.exception)
+                        Log.e(TAG, "Erro ao se logar", task.exception)
                         Toast.makeText(
                             this@LoginActivity,
-                            "Autenticação falhou",
+                            "Login ou senha incorretos",
                             Toast.LENGTH_SHORT
                         ).show()
                     }
                 }
         } else {
-            Toast.makeText(this, "Entre com mais detalhes", Toast.LENGTH_SHORT).show()
+            Toast.makeText(this, "Preencha todos os campos", Toast.LENGTH_SHORT).show()
         }
 
     }
