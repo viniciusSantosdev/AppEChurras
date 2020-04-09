@@ -28,12 +28,12 @@ class LoginActivity : AppCompatActivity() {
     private val TAG = "LoginActivity"
 
     //Global varilables
-    private var login: String? = null
+    private var email: String? = null
     private var pass: String? = null
 
     //UI elements
     private var tvForgotPassActivity: TextView? = null
-    private var etLogin: EditText? = null
+    private var etEmail: EditText? = null
     private var etPass: EditText? = null
     private var btnLogin: Button? = null
     private var btnCadastrar: Button? = null
@@ -62,7 +62,7 @@ class LoginActivity : AppCompatActivity() {
 
     private fun initialise() {
         tvForgotPassActivity = findViewById(R.id.tv_forgot_pass) as TextView
-        etLogin = findViewById(R.id.et_login) as EditText
+        etEmail = findViewById(R.id.et_email) as EditText
         etPass = findViewById(R.id.et_pass) as EditText
         btnLogin = findViewById(R.id.btn_login) as Button
         btnCadastrar = findViewById(R.id.btn_register) as Button
@@ -78,27 +78,28 @@ class LoginActivity : AppCompatActivity() {
             )
         } //Change the screen for the ForgotACtivity
 
-        
+        btnCadastrar!!.setOnClickListener{
+            startActivity(
+                Intent(
+                    this@LoginActivity, CreateActivity::class.java
+                )
+            )
+        }
 
         btnLogin!!.setOnClickListener { loginUser() }
     }
 
-    fun Cadastrar(v:View){
-        val intent = Intent(this, CreateActivity::class.java)
-        startActivity(intent)
-    }
-
     private fun loginUser() {
-        login = etLogin?.text.toString()
+        email = etEmail?.text.toString()
         pass = etPass?.text.toString()
 
-        if (!TextUtils.isEmpty(login) && !TextUtils.isEmpty(pass)) {
+        if (!TextUtils.isEmpty(email) && !TextUtils.isEmpty(pass)) {
             mProgressBar!!.setMessage("Verificando usuário")
             mProgressBar!!.show()
 
             Log.d(TAG, "Usuário logado")
 
-            mAuth!!.signInWithEmailAndPassword(login!!, pass!!)
+            mAuth!!.signInWithEmailAndPassword(email!!, pass!!)
                 .addOnCompleteListener(this) { task ->
 
                     mProgressBar!!.hide()
@@ -126,6 +127,9 @@ class LoginActivity : AppCompatActivity() {
         val intent = Intent(this@LoginActivity, MainAppActivity::class.java)
         intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)
         startActivity(intent)
+            val mensage = "Bem vindo(a) "
+            Toast.makeText(this, mensage, Toast.LENGTH_SHORT).show()
+        finish()
     }
 
 }

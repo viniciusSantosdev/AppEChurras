@@ -20,7 +20,6 @@ class CreateActivity : AppCompatActivity() {
     private var etFirstName: EditText? = null
     private var etLastName: EditText? = null
     private var etUsername: EditText? = null
-    private var etLogin: EditText? = null
     private var etPass: EditText? = null
     private var etEmail: EditText? = null
     private var btnCreateAccount: Button? = null
@@ -52,7 +51,6 @@ class CreateActivity : AppCompatActivity() {
         etFirstName = findViewById(R.id.et_first_name) as EditText
         etLastName = findViewById(R.id.et_last_name) as EditText
         etUsername = findViewById(R.id.et_username) as EditText
-        etLogin = findViewById(R.id.et_login) as EditText
         etPass = findViewById(R.id.et_pass) as EditText
         etEmail = findViewById(R.id.et_email) as EditText
         btnCreateAccount = findViewById(R.id.btn_create_account) as Button
@@ -71,20 +69,18 @@ class CreateActivity : AppCompatActivity() {
         firstName = etFirstName?.text.toString()
         lastName = etLastName?.text.toString()
         username = etUsername?.text.toString()
-        login = etLogin?.text.toString()
         pass = etPass?.text.toString()
         email = etEmail?.text.toString() //Get this infos and convert to String
 
-        if (!TextUtils.isEmpty(firstName) &&
-            !TextUtils.isEmpty(lastName) &&
-            !TextUtils.isEmpty(username) &&
-            !TextUtils.isEmpty(login) &&
-            !TextUtils.isEmpty(pass) &&
-            !TextUtils.isEmpty(email)
+        if (TextUtils.isEmpty(firstName) &&
+            TextUtils.isEmpty(lastName) &&
+            TextUtils.isEmpty(username) &&
+            TextUtils.isEmpty(pass) &&
+            TextUtils.isEmpty(email)
         ) {
-            Toast.makeText(this, "Informações preenchidas corretamente!", Toast.LENGTH_SHORT).show()
-        } else {
             Toast.makeText(this, "Preencha todos os campos", Toast.LENGTH_SHORT).show()
+        } else {
+            Toast.makeText(this, "Informações preenchidas corretamente!", Toast.LENGTH_SHORT).show()
         }
 
         mProgressBar!!.setMessage("Registrando usuário")
@@ -110,7 +106,7 @@ class CreateActivity : AppCompatActivity() {
                     updateUserInfoandUi()
                 } else {
                     Log.w(TAG, "CreateUserWithEmail:Failure", task.exception)
-                    Toast.makeText(this@CreateActivity, "A autenticação falhou", Toast.LENGTH_SHORT)
+                    Toast.makeText(this@CreateActivity, "E-Mail já existente", Toast.LENGTH_SHORT)
                         .show()
                 }
             }
@@ -120,9 +116,11 @@ class CreateActivity : AppCompatActivity() {
 
     private fun updateUserInfoandUi() {
         //Start new activity
-        val intent = Intent(this@CreateActivity, MainAppActivity::class.java)
+        val intent = Intent(this@CreateActivity, LoginActivity::class.java)
         intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)
         startActivity(intent)
+        Toast.makeText(this, "Bem vindo(a), " + firstName + ", sua conta foi criada. Faça login para entrar!", Toast.LENGTH_SHORT).show()
+        finish()
     }
 
     private fun verifyEmail() {
